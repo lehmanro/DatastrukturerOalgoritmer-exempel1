@@ -5,13 +5,19 @@ public class Main {
         Car car = new Car("Tesla");
         Car anotherCar = new Car("Fiat");
 
+        Bike bike = new Bike("Nishiki");
+
         // Skriv ut namnet via getter-metoden
-        System.out.println(car.getName());
+        System.out.println(car.getName() + " (" + car.getType() + ")");
+        System.out.println(bike.getName() + " (" + bike.getType() + ")");
+
 
         // Getter och Setter
         System.out.println(anotherCar.getName());
         anotherCar.setName("Fiat 500");
         System.out.println(anotherCar.getName());
+
+
 
 
     }
