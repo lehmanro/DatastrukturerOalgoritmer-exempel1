@@ -6,6 +6,11 @@ public class Main {
 
 
 
+        
+
+        System.out.println();
+
+
         // Instansiering av objekt
 
 
