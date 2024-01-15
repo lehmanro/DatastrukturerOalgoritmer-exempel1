@@ -1,6 +1,6 @@
 
 
-public class Shirt extends Clothing {
+public class Shirt extends Clothing implements ShopFeatures {
 
     // Överlagring (overload)
     public Shirt(String brand, double price) {
@@ -16,6 +16,7 @@ public class Shirt extends Clothing {
 
     }
     public Shirt(double price){
+
         super.price = price;
     }
     public Shirt() {
@@ -28,4 +29,15 @@ public class Shirt extends Clothing {
     void mend() {
         System.out.println("shirt is mended!");
     }
+
+    @Override
+    public String getProductNumber() {
+        return null;
+    }
+
+    @Override
+    public String getCondition() {
+        return ShopFeatures.super.getCondition();
+    }
+
 }
