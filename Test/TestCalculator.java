@@ -11,6 +11,7 @@ public class TestCalculator {
             Calculator calculator = new Calculator();
             assertEquals(4, calculator.Multiply(2, 2) );
         }
+        @Test
         void testCalculator3Number() {
             Calculator calculator2 = new Calculator();
             assertEquals(4, calculator2.Multiply(2, 2, 1) );
