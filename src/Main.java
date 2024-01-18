@@ -1,3 +1,5 @@
+import java.util.InputMismatchException;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -5,28 +7,54 @@ public class Main {
     public static void main(String[] args) {
 
 
+        Random random = new Random();
+
 
         Scanner intInput = new Scanner(System.in);
         Scanner strInput = new Scanner(System.in);
+
+        System.out.println(random.nextInt(99));
+        System.out.println(random.nextInt(100,999));
+
+        //System.exit(0);
 
         Calculator calc = new Calculator();
         System.out.println(calc.multiply(3, 5));
         System.out.println(calc.multiply(3, 5, 6));
 
-        System.out.printf("Skriv ditt namn: ");
-        String userName = strInput.nextLine();
-        System.out.printf("Hej %s!\n", userName);
+        //System.out.printf("Skriv ditt namn: ");
+        //String userName = strInput.nextLine();
+        //System.out.printf("Hej %s!\n", userName);
 
 
-        System.out.printf("Skriv ett tal att multiplicera: ");
-        int userIntInput = intInput.nextInt();
-        System.out.printf("Skriv ett tal till: ");
-        int userIntInput2 = intInput.nextInt();
-        System.out.printf("Svar: %d * %d = %d\n",
-                userIntInput,
-                userIntInput2,
-                calc.multiply(userIntInput, userIntInput2)
-        );
+
+
+        while (true) {
+
+            try {
+                System.out.printf("Skriv ett tal att multiplicera: ");
+                int userIntInput = Integer.parseInt(strInput.nextLine());
+                /*System.out.printf("Skriv ett tal till: ");
+                int userIntInput2 = intInput.nextInt();*/
+                System.out.printf("Svar: 5 * %d = %d\n",
+                        userIntInput,
+                       /* userIntInput2,*/
+                        calc.multiply(/*userIntInput2*/5, userIntInput)
+                );
+                break;
+            }
+            catch (NumberFormatException e){
+                System.out.println("Du ska ge ett heltal");
+            }
+            catch (Exception e) {
+                System.out.println("Någonting gick fel");
+            }
+
+        }
+
+
+
+
 
 
 
