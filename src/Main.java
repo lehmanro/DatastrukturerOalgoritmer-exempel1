@@ -1,4 +1,4 @@
-import java.util.HashMap;
+import java.util.Scanner;
 
 public class Main {
     static final double GAME_VERSION = 1.0;
@@ -6,7 +6,29 @@ public class Main {
 
 
 
-        
+        Scanner intInput = new Scanner(System.in);
+        Scanner strInput = new Scanner(System.in);
+
+        Calculator calc = new Calculator();
+        System.out.println(calc.multiply(3, 5));
+        System.out.println(calc.multiply(3, 5, 6));
+
+        System.out.printf("Skriv ditt namn: ");
+        String userName = strInput.nextLine();
+        System.out.printf("Hej %s!\n", userName);
+
+
+        System.out.printf("Skriv ett tal att multiplicera: ");
+        int userIntInput = intInput.nextInt();
+        System.out.printf("Skriv ett tal till: ");
+        int userIntInput2 = intInput.nextInt();
+        System.out.printf("Svar: %d * %d = %d\n",
+                userIntInput,
+                userIntInput2,
+                calc.multiply(userIntInput, userIntInput2)
+        );
+
+
 
         /*System.out.println();
 
@@ -15,6 +37,9 @@ public class Main {
 
 
         //Funkar ej med abstract: Clothing hat = new Clothing();
+
+        Scanner intInput = new Scanner(System.in)
+
 
 
         // default-konstruktor
