@@ -1,7 +1,6 @@
 abstract class Clothing {
 
-
-    double price =  0;
+    double price = 0;
     String brand;
 
     public double getPrice() {
@@ -12,13 +11,10 @@ abstract class Clothing {
         this.price = price;
     }
 
-
     public String getBrand() {
         return brand;
     }
 
     abstract void mend();
-
-
 
 }

@@ -1,9 +1,11 @@
 public interface ShopFeatures {
 
     double getPrice();
+
     String getProductNumber();
 
-    default String getCondition(){
+    default String getCondition() {
         return "Brand new";
     }
+
 }

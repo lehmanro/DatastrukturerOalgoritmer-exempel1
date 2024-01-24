@@ -1,4 +1,5 @@
 public class Vehicle {
+
     private String name;
     private String type;
 
@@ -6,6 +7,7 @@ public class Vehicle {
         this.name = name;
         this.type = type;
     }
+
 
     public void soundWarning() {
         System.out.println("Default sound");
@@ -20,7 +22,6 @@ public class Vehicle {
         return type;
     }
 
-
     // Setter
     public void setName(String name) {
         this.name = name;
@@ -30,4 +31,3 @@ public class Vehicle {
         return 0;
     }
 }
-

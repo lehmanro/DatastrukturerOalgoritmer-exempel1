@@ -1,26 +1,17 @@
 public class Car extends Vehicle {
 
-
-
-
     private double discount = 0.9;
     public double price = 1000;
     private int fuel = 0;
 
-    //Klassvariable, samma värde för ala klasser
+    // Klassvariabel, samma variabel för alla klasser
     static int carsCreated = 0;
 
     public Car(String name) {
-
-        super(name , "Motorized");
+        super(name, "Motorized");
         carsCreated++;
 
         System.out.println("cars created: " + carsCreated);
-
-    }
-
-    public static int getcarsCreated() {
-        return carsCreated;
     }
 
     @Override
@@ -30,7 +21,7 @@ public class Car extends Vehicle {
 
     @Override
     public double getPrice() {
-        return price * discount;
+        return price*discount;
     }
 
     public void refuel() {
@@ -38,14 +29,19 @@ public class Car extends Vehicle {
     }
 
     public void setPrice(double price) {
-        //if (price < 0) throw  Error;
+        // if (price < 0) throw Error;
         this.price = price;
+    }
+
+    public static int getCarsCreated() {
+        return carsCreated;
+    }
+
+    public double getDiscount() {
+        return discount;
     }
 
     public void setDiscount(double discount) {
         this.discount = discount;
     }
-
-
 }
-

@@ -1,28 +1,18 @@
-
-
 public class Shirt extends Clothing implements ShopFeatures {
 
     // Överlagring (overload)
     public Shirt(String brand, double price) {
-
         super.brand = brand;
         super.price = price;
-
     }
-
     public Shirt(String brand) {
-
         super.brand = brand;
-
     }
-    public Shirt(double price){
-
+    public Shirt(double price) {
         super.price = price;
     }
     public Shirt() {
-
-        super.brand = "no.name";
-
+        super.brand = "no-name";
     }
 
     @Override
@@ -33,11 +23,6 @@ public class Shirt extends Clothing implements ShopFeatures {
     @Override
     public String getProductNumber() {
         return null;
-    }
-
-    @Override
-    public String getCondition() {
-        return ShopFeatures.super.getCondition();
     }
 
 }
