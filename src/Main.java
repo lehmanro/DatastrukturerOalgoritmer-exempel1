@@ -10,6 +10,21 @@ public class Main {
         String[] testCharacters = {"a","b","c","d","e","f","p"};
         StringArray test = new StringArray(testCharacters);
 
+        Graphy graphy = new Graphy();
+        graphy.createNode("skj", "Skjorta");
+        graphy.createNode("jea", "Jeans");
+        graphy.createNode("sli", "Slips");
+        graphy.createNode("cro", "Crocs");
+        graphy.printGraph();
+
+        Queuey queuey = new Queuey();
+        queuey.enqueue(testCharacters[0]);
+        queuey.enqueue(testCharacters[1]);
+        queuey.enqueue(testCharacters[2]);
+        queuey.enqueue(testCharacters[3]);
+        queuey.dequeue();
+        queuey.dequeue();
+
         Stacky stacky = new Stacky(5);
         stacky.push(testCharacters[0]);
         stacky.push(testCharacters[5]);
